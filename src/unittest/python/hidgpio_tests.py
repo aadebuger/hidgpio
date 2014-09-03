@@ -19,7 +19,7 @@ class Test(unittest.TestCase):
         print 'ret=',ret
         ret = dll.CH9326WriteIOData(handle,0xffff)
         time.sleep(5)
-        ret = dll.H9326WriteIOData(handle,0x0)
+        ret = dll.CH9326WriteIOData(handle,0x0)
                 
         dll.CH9326CloseDevice(handle)
 
