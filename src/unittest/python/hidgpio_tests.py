@@ -19,9 +19,9 @@ class Test(unittest.TestCase):
             ret = dll.CH9326SetIODir(handle,0xffff)
             print 'ret=',ret
             ret = dll.CH9326WriteIOData(handle,0xffff)
-            time.sleep(5)
+            time.sleep(1)
             ret = dll.CH9326WriteIOData(handle,0x0)
-                
+            time.sleep(1)                
         dll.CH9326CloseDevice(handle)
 
 
