@@ -5,12 +5,13 @@ Created on 2014年9月3日
 @author: aadebuger
 '''
 import unittest
-
+import ctypes
 class Test(unittest.TestCase):
 
 
     def testName(self):
-        pass
+        dll = ctypes.windll.LoadLibrary( 'CH9326DLL.dll' )
+        
 
 
 if __name__ == "__main__":
