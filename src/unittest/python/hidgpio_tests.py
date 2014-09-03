@@ -12,7 +12,9 @@ class Test(unittest.TestCase):
     def testName(self):
         print 'test dll'
         dll = ctypes.windll.LoadLibrary( 'CH9326DLL.dll' )
-        
+        handle =dll.CH9326OpenDevice(0x1a86,0xe010);
+        print 'handle=',handle
+        dll.CH9326CloseDevice(handle)
 
 
 if __name__ == "__main__":
