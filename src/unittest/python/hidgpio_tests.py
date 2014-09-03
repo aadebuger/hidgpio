@@ -10,6 +10,7 @@ class Test(unittest.TestCase):
 
 
     def testName(self):
+        print 'test dll'
         dll = ctypes.windll.LoadLibrary( 'CH9326DLL.dll' )
         
 
