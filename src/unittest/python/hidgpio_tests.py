@@ -15,13 +15,14 @@ class Test(unittest.TestCase):
         dll = ctypes.windll.LoadLibrary( 'CH9326DLL.dll' )
         handle =dll.CH9326OpenDevice(0x1a86,0xe010);
         print 'handle=',handle
+        ret = dll.CH9326SetIODir(handle,0xffff)
+
         for i in range(100):
-            ret = dll.CH9326SetIODir(handle,0xffff)
             print 'ret=',ret
             ret = dll.CH9326WriteIOData(handle,0xffff)
             time.sleep(1)
             ret = dll.CH9326WriteIOData(handle,0x0)
-            time.sleep(1)                
+            time.sleep(5)                
         dll.CH9326CloseDevice(handle)
 
 
