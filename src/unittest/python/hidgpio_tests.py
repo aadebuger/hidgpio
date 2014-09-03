@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
         print 'handle=',handle
         ret = dll.CH9326SetIODir(handle,0xffff)
 
-        for i in range(100):
+        for i in range(1000):
             print 'ret=',ret
             print 'on'
             ret = dll.CH9326WriteIOData(handle,0xffff)
